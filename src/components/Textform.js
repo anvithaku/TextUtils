@@ -33,7 +33,7 @@ export default function Textform({darkMode}) {
         let wordCount = text.trim().split(/\s+/).length;
         let charCount = text.trim().split('').filter(c => c!==" " && c!=="\n" && c!=="\t").length;
         let sentenceCount = text.split('').filter(c => c===".").length;
-        let newText = `Word Count: {wordCount}\nCharacter Count: {charCount}\nSentence Count: {sentenceCount}`;
+        let newText = `Word Count: ${wordCount}\nCharacter Count: ${charCount}\nSentence Count: ${sentenceCount}`;
         setText(newText);
         
     }
