@@ -31,8 +31,8 @@ export default function Textform({darkMode}) {
     const getSummary = () =>{
         console.log("Get summary clicked");
         let wordCount = text.trim().split(/\s+/).length;
-        let charCount = text.trim().split('').filter(c => c!=" " && c!="\n" && c!="\t").length;
-        let sentenceCount = text.split('').filter(c => c==".").length;
+        let charCount = text.trim().split('').filter(c => c!==" " && c!=="\n" && c!=="\t").length;
+        let sentenceCount = text.split('').filter(c => c===".").length;
         let newText = "Word Count: "+wordCount+"\n"+"Character Count: "+charCount+"\n"+"Sentence Count: "+sentenceCount;
         setText(newText);
         
